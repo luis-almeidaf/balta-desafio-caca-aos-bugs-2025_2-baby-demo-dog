@@ -1,6 +1,8 @@
-namespace BugStore.Models;
+using MediatR;
 
-public class Product
+namespace BugStore.Requests.Products;
+
+public class UpdateProductRequest : IRequest<Unit>
 {
     public Guid Id { get; set; }
     public string Title { get; set; } = string.Empty;

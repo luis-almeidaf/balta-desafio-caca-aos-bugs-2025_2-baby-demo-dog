@@ -1,6 +1,8 @@
-namespace BugStore.Models;
+using MediatR;
 
-public class Customer
+namespace BugStore.Requests.Customers;
+
+public class UpdateCustomerRequest : IRequest<Unit>
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = string.Empty;

@@ -1,8 +1,10 @@
-namespace BugStore.Models;
+using BugStore.Responses.Customers;
+using MediatR;
 
-public class Customer
+namespace BugStore.Requests.Customers;
+
+public class CreateCustomerRequest : IRequest<CreateCustomerResponse>
 {
-    public Guid Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string Phone { get; set; } = string.Empty;

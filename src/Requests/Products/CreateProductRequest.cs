@@ -1,8 +1,10 @@
-namespace BugStore.Models;
+using BugStore.Responses.Products;
+using MediatR;
 
-public class Product
+namespace BugStore.Requests.Products;
+
+public class CreateProductRequest : IRequest<CreateProductResponse>
 {
-    public Guid Id { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public string Slug { get; set; } = string.Empty;
